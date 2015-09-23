@@ -1,0 +1,830 @@
+Analysis & Synthesis report for UAN
+Mon Feb 17 15:18:14 2014
+Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |uncoverANumber|endGameDisplay
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: Clock100And1:m1
+ 15. Parameter Settings for User Entity Instance: Clock100And1:m1|TffCounter:div32
+ 16. Parameter Settings for User Entity Instance: Clock100And1:m1|TffCounter:div15625
+ 17. Parameter Settings for User Entity Instance: Clock100And1:m1|TffCounter:div100
+ 18. Parameter Settings for User Entity Instance: LFSR2:rand
+ 19. Port Connectivity Checks: "hex2seven:time100ss"
+ 20. Port Connectivity Checks: "hex2seven:time10ss"
+ 21. Port Connectivity Checks: "hex2seven:time1ss"
+ 22. Port Connectivity Checks: "hex2seven:time10thss"
+ 23. Port Connectivity Checks: "hex2seven:error100s"
+ 24. Port Connectivity Checks: "hex2seven:error10s"
+ 25. Port Connectivity Checks: "hex2seven:error1s"
+ 26. Port Connectivity Checks: "hex2seven:hundreds"
+ 27. Port Connectivity Checks: "hex2seven:tens"
+ 28. Port Connectivity Checks: "hex2seven:ones"
+ 29. Port Connectivity Checks: "binary_to_BCD:converter|add3:m6"
+ 30. Port Connectivity Checks: "binary_to_BCD:converter|add3:m1"
+ 31. Port Connectivity Checks: "binary_to_BCD:converter"
+ 32. Port Connectivity Checks: "LFSR2:rand"
+ 33. Port Connectivity Checks: "Clock100And1:m1|TffCounter:div100|TffUnit:unit[6].FF"
+ 34. Port Connectivity Checks: "Clock100And1:m1|TffCounter:div100"
+ 35. Port Connectivity Checks: "Clock100And1:m1|TffCounter:div15625|TffUnit:unit[13].FF"
+ 36. Port Connectivity Checks: "Clock100And1:m1|TffCounter:div15625"
+ 37. Port Connectivity Checks: "Clock100And1:m1|TffCounter:div32|TffUnit:unit[4].FF"
+ 38. Port Connectivity Checks: "Clock100And1:m1|TffCounter:div32"
+ 39. Port Connectivity Checks: "Clock100And1:m1"
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                       ;
++------------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Feb 17 15:18:14 2014         ;
+; Quartus II 32-bit Version          ; 12.0 Build 263 08/02/2012 SP 2 SJ Web Edition ;
+; Revision Name                      ; UAN                                           ;
+; Top-level Entity Name              ; uncoverANumber                                ;
+; Family                             ; Cyclone III                                   ;
+; Total logic elements               ; 619                                           ;
+;     Total combinational functions  ; 619                                           ;
+;     Dedicated logic registers      ; 129                                           ;
+; Total registers                    ; 129                                           ;
+; Total pins                         ; 43                                            ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total PLLs                         ; 0                                             ;
++------------------------------------+-----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                                      ; uncoverANumber     ; UAN                ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                            ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------+---------+
+; TffUnit.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Josh/Documents/uncoverANumber/TffUnit.v        ;         ;
+; TffCounter.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Josh/Documents/uncoverANumber/TffCounter.v     ;         ;
+; hex2seven.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Josh/Documents/uncoverANumber/hex2seven.v      ;         ;
+; Clock100And1.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Josh/Documents/uncoverANumber/Clock100And1.v   ;         ;
+; lfsr2.v                          ; yes             ; User Verilog HDL File  ; C:/Users/Josh/Documents/uncoverANumber/lfsr2.v          ;         ;
+; add3.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Josh/Documents/uncoverANumber/add3.v           ;         ;
+; binary_to_BCD.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Josh/Documents/uncoverANumber/binary_to_BCD.v  ;         ;
+; uncoverANumber.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Josh/Documents/uncoverANumber/uncoverANumber.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                        ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimated Total logic elements              ; 619                  ;
+;                                             ;                      ;
+; Total combinational functions               ; 619                  ;
+; Logic element usage by number of LUT inputs ;                      ;
+;     -- 4 input functions                    ; 462                  ;
+;     -- 3 input functions                    ; 108                  ;
+;     -- <=2 input functions                  ; 49                   ;
+;                                             ;                      ;
+; Logic elements by mode                      ;                      ;
+;     -- normal mode                          ; 619                  ;
+;     -- arithmetic mode                      ; 0                    ;
+;                                             ;                      ;
+; Total registers                             ; 129                  ;
+;     -- Dedicated logic registers            ; 129                  ;
+;     -- I/O registers                        ; 0                    ;
+;                                             ;                      ;
+; I/O pins                                    ; 43                   ;
+; Maximum fan-out node                        ; Clock100And1:m1|CM2S ;
+; Maximum fan-out                             ; 63                   ;
+; Total fan-out                               ; 2663                 ;
+; Average fan-out                             ; 3.19                 ;
++---------------------------------------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                 ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Library Name ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+; |uncoverANumber                ; 619 (519)         ; 129 (89)     ; 0           ; 0            ; 0       ; 0         ; 43   ; 0            ; |uncoverANumber                                                         ;              ;
+;    |Clock100And1:m1|           ; 44 (7)            ; 29 (3)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1                                         ;              ;
+;       |TffCounter:div100|      ; 9 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div100                       ;              ;
+;          |TffUnit:unit[0].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div100|TffUnit:unit[0].FF    ;              ;
+;          |TffUnit:unit[1].FF|  ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div100|TffUnit:unit[1].FF    ;              ;
+;          |TffUnit:unit[2].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div100|TffUnit:unit[2].FF    ;              ;
+;          |TffUnit:unit[3].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div100|TffUnit:unit[3].FF    ;              ;
+;          |TffUnit:unit[4].FF|  ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div100|TffUnit:unit[4].FF    ;              ;
+;          |TffUnit:unit[5].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div100|TffUnit:unit[5].FF    ;              ;
+;          |TffUnit:unit[6].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div100|TffUnit:unit[6].FF    ;              ;
+;       |TffCounter:div15625|    ; 20 (0)            ; 14 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625                     ;              ;
+;          |TffUnit:unit[0].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[0].FF  ;              ;
+;          |TffUnit:unit[10].FF| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[10].FF ;              ;
+;          |TffUnit:unit[11].FF| ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[11].FF ;              ;
+;          |TffUnit:unit[12].FF| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[12].FF ;              ;
+;          |TffUnit:unit[13].FF| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[13].FF ;              ;
+;          |TffUnit:unit[1].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[1].FF  ;              ;
+;          |TffUnit:unit[2].FF|  ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[2].FF  ;              ;
+;          |TffUnit:unit[3].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[3].FF  ;              ;
+;          |TffUnit:unit[4].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[4].FF  ;              ;
+;          |TffUnit:unit[5].FF|  ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[5].FF  ;              ;
+;          |TffUnit:unit[6].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[6].FF  ;              ;
+;          |TffUnit:unit[7].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[7].FF  ;              ;
+;          |TffUnit:unit[8].FF|  ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[8].FF  ;              ;
+;          |TffUnit:unit[9].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[9].FF  ;              ;
+;       |TffCounter:div32|       ; 8 (3)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div32                        ;              ;
+;          |TffUnit:unit[0].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div32|TffUnit:unit[0].FF     ;              ;
+;          |TffUnit:unit[1].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div32|TffUnit:unit[1].FF     ;              ;
+;          |TffUnit:unit[2].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div32|TffUnit:unit[2].FF     ;              ;
+;          |TffUnit:unit[3].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div32|TffUnit:unit[3].FF     ;              ;
+;          |TffUnit:unit[4].FF|  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|Clock100And1:m1|TffCounter:div32|TffUnit:unit[4].FF     ;              ;
+;    |LFSR2:rand|                ; 11 (11)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|LFSR2:rand                                              ;              ;
+;    |binary_to_BCD:converter|   ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|binary_to_BCD:converter                                 ;              ;
+;       |add3:m2|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|binary_to_BCD:converter|add3:m2                         ;              ;
+;       |add3:m3|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|binary_to_BCD:converter|add3:m3                         ;              ;
+;       |add3:m4|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|binary_to_BCD:converter|add3:m4                         ;              ;
+;       |add3:m5|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|binary_to_BCD:converter|add3:m5                         ;              ;
+;    |hex2seven:error100s|       ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|hex2seven:error100s                                     ;              ;
+;    |hex2seven:error10s|        ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|hex2seven:error10s                                      ;              ;
+;    |hex2seven:error1s|         ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|hex2seven:error1s                                       ;              ;
+;    |hex2seven:ones|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|hex2seven:ones                                          ;              ;
+;    |hex2seven:time10ss|        ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|hex2seven:time10ss                                      ;              ;
+;    |hex2seven:time10thss|      ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|hex2seven:time10thss                                    ;              ;
+;    |hex2seven:time1ss|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uncoverANumber|hex2seven:time1ss                                       ;              ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------+
+; State Machine - |uncoverANumber|endGameDisplay                                    ;
++--------------------+--------------------+--------------------+--------------------+
+; Name               ; endGameDisplay.000 ; endGameDisplay.010 ; endGameDisplay.001 ;
++--------------------+--------------------+--------------------+--------------------+
+; endGameDisplay.000 ; 0                  ; 0                  ; 0                  ;
+; endGameDisplay.001 ; 1                  ; 0                  ; 1                  ;
+; endGameDisplay.010 ; 1                  ; 1                  ; 0                  ;
++--------------------+--------------------+--------------------+--------------------+
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; SS[3..9,11..31]                         ; Merged with SS[10]                     ;
+; pause                                   ; Merged with BUT1set[0]                 ;
+; BUT1set[1..9,11..31]                    ; Merged with BUT1set[10]                ;
+; BUT2set[1..9,11..31]                    ; Merged with BUT2set[10]                ;
+; BUT0set[1..9,11..31]                    ; Merged with BUT0set[10]                ;
+; BUT1set[10]                             ; Stuck at GND due to stuck port data_in ;
+; BUT2set[10]                             ; Stuck at GND due to stuck port data_in ;
+; BUT0set[10]                             ; Stuck at GND due to stuck port data_in ;
+; SS[10]                                  ; Stuck at GND due to stuck port data_in ;
+; FoundS1[0..6]                           ; Stuck at VCC due to stuck port data_in ;
+; FoundS2[0..6]                           ; Stuck at VCC due to stuck port data_in ;
+; endGameDisplay~4                        ; Lost fanout                            ;
+; Total Number of Removed Registers = 138 ;                                        ;
++-----------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                             ;
++---------------+---------------------------+---------------------------------------------------------------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register                                                      ;
++---------------+---------------------------+---------------------------------------------------------------------------------------------+
+; BUT1set[10]   ; Stuck at GND              ; SS[10], FoundS1[0], FoundS1[1], FoundS1[2], FoundS1[3], FoundS1[4], FoundS1[5], FoundS1[6], ;
+;               ; due to stuck port data_in ; FoundS2[0], FoundS2[1], FoundS2[2], FoundS2[3], FoundS2[4], FoundS2[5], FoundS2[6]          ;
++---------------+---------------------------+---------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 129   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 73    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; LEDS[0]~reg0                            ; 1       ;
+; LEDS[1]~reg0                            ; 1       ;
+; LEDS[2]~reg0                            ; 1       ;
+; LEDS[3]~reg0                            ; 1       ;
+; LEDS[4]~reg0                            ; 1       ;
+; LEDS[5]~reg0                            ; 1       ;
+; LEDS[6]~reg0                            ; 1       ;
+; LEDS[7]~reg0                            ; 1       ;
+; LEDS[8]~reg0                            ; 1       ;
+; LEDS[9]~reg0                            ; 1       ;
+; SevenS0[0]~reg0                         ; 3       ;
+; SevenS0[1]~reg0                         ; 3       ;
+; SevenS0[2]~reg0                         ; 3       ;
+; SevenS0[3]~reg0                         ; 3       ;
+; SevenS0[4]~reg0                         ; 3       ;
+; SevenS0[5]~reg0                         ; 3       ;
+; SevenS0[6]~reg0                         ; 3       ;
+; SevenS1[0]~reg0                         ; 3       ;
+; SevenS1[1]~reg0                         ; 3       ;
+; SevenS1[2]~reg0                         ; 3       ;
+; SevenS1[3]~reg0                         ; 3       ;
+; SevenS1[4]~reg0                         ; 3       ;
+; SevenS1[5]~reg0                         ; 3       ;
+; SevenS1[6]~reg0                         ; 3       ;
+; dec1~reg0                               ; 2       ;
+; SevenS2[0]~reg0                         ; 3       ;
+; SevenS2[1]~reg0                         ; 3       ;
+; SevenS2[2]~reg0                         ; 3       ;
+; SevenS2[3]~reg0                         ; 3       ;
+; SevenS2[4]~reg0                         ; 3       ;
+; SevenS2[5]~reg0                         ; 3       ;
+; SevenS2[6]~reg0                         ; 3       ;
+; BUT0set[0]                              ; 24      ;
+; BUT1set[0]                              ; 35      ;
+; BUT2set[0]                              ; 3       ;
+; LFSR2:rand|QQ[2]                        ; 5       ;
+; LFSR2:rand|QQ[4]                        ; 5       ;
+; LFSR2:rand|QQ[6]                        ; 6       ;
+; LFSR2:rand|QQ[8]                        ; 5       ;
+; LFSR2:rand|QQ[10]                       ; 1       ;
+; FoundS0[0]                              ; 18      ;
+; FoundS0[1]                              ; 18      ;
+; FoundS0[2]                              ; 18      ;
+; FoundS0[3]                              ; 19      ;
+; FoundS0[4]                              ; 18      ;
+; FoundS0[5]                              ; 18      ;
+; FoundS0[6]                              ; 19      ;
+; LFSR2:rand|D                            ; 1       ;
+; gamefinished                            ; 2       ;
+; Total number of inverted registers = 49 ;         ;
++-----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                    ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------+----------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; |uncoverANumber|time1s[1]     ;                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; |uncoverANumber|time10s[0]    ;                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |uncoverANumber|time100ths[2] ;                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; |uncoverANumber|time10ths[2]  ;                            ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; |uncoverANumber|errorcount[3] ;                            ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; |uncoverANumber|SS[1]         ;                            ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; |uncoverANumber|SS[2]         ;                            ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; |uncoverANumber|LEDS[2]~reg0  ;                            ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; |uncoverANumber|lastCount     ;                            ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; |uncoverANumber|nextCount     ;                            ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; |uncoverANumber|lastCount     ;                            ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; |uncoverANumber|lastCount     ;                            ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; |uncoverANumber|nextCount     ;                            ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; |uncoverANumber|nextCount     ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------+----------------------------+
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clock100And1:m1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; N1             ; 5     ; Signed Integer                      ;
+; N2             ; 14    ; Signed Integer                      ;
+; M2             ; 15625 ; Signed Integer                      ;
+; N3             ; 7     ; Signed Integer                      ;
+; M3             ; 100   ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clock100And1:m1|TffCounter:div32 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 5     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clock100And1:m1|TffCounter:div15625 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 14    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clock100And1:m1|TffCounter:div100 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; N              ; 7     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LFSR2:rand ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; N              ; 10    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex2seven:time100ss"                                                                                                                                                                  ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                            ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; SevenS  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; BI_     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BI_[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; LT_     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; LT_[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex2seven:time10ss"                                                                                                                                                                  ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; BI_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BI_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; LT_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; LT_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex2seven:time1ss"                                                                                                                                                                   ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; BI_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BI_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; LT_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; LT_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex2seven:time10thss"                                                                                                                                                                ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; BI_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BI_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; LT_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; LT_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex2seven:error100s"                                                                                                                                                                 ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; BI_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BI_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; LT_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; LT_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex2seven:error10s"                                                                                                                                                                  ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; BI_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BI_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; LT_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; LT_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex2seven:error1s"                                                                                                                                                                   ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; BI_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BI_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; LT_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; LT_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex2seven:hundreds"                                                                                                                                                                  ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; BI_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BI_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; LT_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; LT_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex2seven:tens"                                                                                                                                                                      ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; BI_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BI_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; LT_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; LT_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex2seven:ones"                                                                                                                                                                      ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; BI_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; BI_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; LT_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; LT_[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "binary_to_BCD:converter|add3:m6" ;
++-------+-------+----------+----------------------------------+
+; Port  ; Type  ; Severity ; Details                          ;
++-------+-------+----------+----------------------------------+
+; in[3] ; Input ; Info     ; Stuck at GND                     ;
++-------+-------+----------+----------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "binary_to_BCD:converter|add3:m1" ;
++-------+-------+----------+----------------------------------+
+; Port  ; Type  ; Severity ; Details                          ;
++-------+-------+----------+----------------------------------+
+; in[3] ; Input ; Info     ; Stuck at GND                     ;
++-------+-------+----------+----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "binary_to_BCD:converter"                                                                                                                                                   ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ONES     ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (12 bits) it drives.  The 8 most-significant bit(s) in the port expression will be connected to GND. ;
+; TENS     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                               ;
+; HUNDREDS ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                               ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR2:rand"                                                                                                                                    ;
++----------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                     ;
++----------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; k        ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "k[9..4]" will be connected to GND.  ;
+; k[2..0]  ; Input ; Info     ; Stuck at VCC                                                                                                                                ;
+; k[9]     ; Input ; Info     ; Stuck at GND                                                                                                                                ;
+; Set_     ; Input ; Info     ; Stuck at VCC                                                                                                                                ;
+; SS       ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "SS[9..4]" will be connected to GND. ;
+; SS[2..0] ; Input ; Info     ; Stuck at GND                                                                                                                                ;
+; SS[9]    ; Input ; Info     ; Stuck at VCC                                                                                                                                ;
++----------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Clock100And1:m1|TffCounter:div100|TffUnit:unit[6].FF"                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Tout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Clock100And1:m1|TffCounter:div100"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; TCO  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Clock100And1:m1|TffCounter:div15625|TffUnit:unit[13].FF"                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Tout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Clock100And1:m1|TffCounter:div15625"                                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; TCO  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Clock100And1:m1|TffCounter:div32|TffUnit:unit[4].FF"                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Tout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Clock100And1:m1|TffCounter:div32"                                                    ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; ClrS_ ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; QQ    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Clock100And1:m1"                                                                                                                                                                      ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; En       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; En[-1]   ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; En1      ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; En1[-1]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; Clr_     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Clr_[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:18     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Feb 17 15:18:01 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UAN -c UAN
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file tffunit.v
+    Info (12023): Found entity 1: TffUnit
+Warning (10090): Verilog HDL syntax warning at TffCounter.v(2): extra block comment delimiter characters /* within block comment
+Info (12021): Found 1 design units, including 1 entities, in source file tffcounter.v
+    Info (12023): Found entity 1: TffCounter
+Info (12021): Found 1 design units, including 1 entities, in source file hex2seven.v
+    Info (12023): Found entity 1: hex2seven
+Info (12021): Found 1 design units, including 1 entities, in source file clock100and1.v
+    Info (12023): Found entity 1: Clock100And1
+Info (12021): Found 1 design units, including 1 entities, in source file lfsr2.v
+    Info (12023): Found entity 1: LFSR2
+Info (12021): Found 1 design units, including 1 entities, in source file add3.v
+    Info (12023): Found entity 1: add3
+Info (12021): Found 1 design units, including 1 entities, in source file binary_to_bcd.v
+    Info (12023): Found entity 1: binary_to_BCD
+Warning (10463): Verilog HDL Declaration warning at uncoverANumber.v(84): "rand" is SystemVerilog-2005 keyword
+Info (12021): Found 1 design units, including 1 entities, in source file uncoveranumber.v
+    Info (12023): Found entity 1: uncoverANumber
+Info (12127): Elaborating entity "uncoverANumber" for the top level hierarchy
+Warning (10762): Verilog HDL Case Statement warning at uncoverANumber.v(197): can't check case statement for completeness because the case expression has too many possible states
+Warning (10230): Verilog HDL assignment warning at uncoverANumber.v(142): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at uncoverANumber.v(146): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at uncoverANumber.v(152): truncated value with size 32 to match size of target (4)
+Warning (10776): Verilog HDL warning at uncoverANumber.v(132): variable lastCount in static task or function lastCount may have unintended latch behavior
+Warning (10241): Verilog HDL Function Declaration warning at uncoverANumber.v(132): function "lastCount" may return a Don't Care value because its output register may not be assigned a value in every possible path through the function
+Warning (10762): Verilog HDL Case Statement warning at uncoverANumber.v(240): can't check case statement for completeness because the case expression has too many possible states
+Warning (10230): Verilog HDL assignment warning at uncoverANumber.v(116): truncated value with size 32 to match size of target (4)
+Warning (10776): Verilog HDL warning at uncoverANumber.v(102): variable nextCount in static task or function nextCount may have unintended latch behavior
+Warning (10241): Verilog HDL Function Declaration warning at uncoverANumber.v(102): function "nextCount" may return a Don't Care value because its output register may not be assigned a value in every possible path through the function
+Warning (10762): Verilog HDL Case Statement warning at uncoverANumber.v(315): can't check case statement for completeness because the case expression has too many possible states
+Warning (10030): Net "nextCount" at uncoverANumber.v(102) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "lastCount" at uncoverANumber.v(132) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "Clock100And1" for hierarchy "Clock100And1:m1"
+Info (12128): Elaborating entity "TffCounter" for hierarchy "Clock100And1:m1|TffCounter:div32"
+Info (12128): Elaborating entity "TffUnit" for hierarchy "Clock100And1:m1|TffCounter:div32|TffUnit:unit[0].FF"
+Info (12128): Elaborating entity "TffCounter" for hierarchy "Clock100And1:m1|TffCounter:div15625"
+Info (12128): Elaborating entity "TffCounter" for hierarchy "Clock100And1:m1|TffCounter:div100"
+Info (12128): Elaborating entity "LFSR2" for hierarchy "LFSR2:rand"
+Info (12128): Elaborating entity "binary_to_BCD" for hierarchy "binary_to_BCD:converter"
+Info (12128): Elaborating entity "add3" for hierarchy "binary_to_BCD:converter|add3:m1"
+Info (12128): Elaborating entity "hex2seven" for hierarchy "hex2seven:ones"
+Warning (10240): Verilog HDL Always Construct warning at hex2seven.v(12): inferring latch(es) for variable "SevenS", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "SevenS[0]" at hex2seven.v(49)
+Info (10041): Inferred latch for "SevenS[1]" at hex2seven.v(49)
+Info (10041): Inferred latch for "SevenS[2]" at hex2seven.v(49)
+Info (10041): Inferred latch for "SevenS[3]" at hex2seven.v(49)
+Info (10041): Inferred latch for "SevenS[4]" at hex2seven.v(49)
+Info (10041): Inferred latch for "SevenS[5]" at hex2seven.v(49)
+Info (10041): Inferred latch for "SevenS[6]" at hex2seven.v(49)
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[11]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[10]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[9]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[8]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[7]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[6]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[5]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[4]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[11]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[10]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[9]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[8]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[7]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[6]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[5]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[4]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[11]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[10]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[9]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[8]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[7]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[6]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[5]" is missing source, defaulting to GND
+    Warning (12110): Net "Binary2Decimal[4]" is missing source, defaulting to GND
+Warning (12241): 13 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "SevenS3[0]" is stuck at VCC
+    Warning (13410): Pin "SevenS3[1]" is stuck at VCC
+    Warning (13410): Pin "SevenS3[2]" is stuck at VCC
+    Warning (13410): Pin "SevenS3[3]" is stuck at VCC
+    Warning (13410): Pin "SevenS3[4]" is stuck at VCC
+    Warning (13410): Pin "SevenS3[5]" is stuck at VCC
+    Warning (13410): Pin "SevenS3[6]" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 666 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 39 output pins
+    Info (21061): Implemented 623 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 53 warnings
+    Info: Peak virtual memory: 311 megabytes
+    Info: Processing ended: Mon Feb 17 15:18:14 2014
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:12
+
+

@@ -1,0 +1,6 @@
+
+State Machine - |uncoverANumber|endGameDisplay
+Name endGameDisplay.000 endGameDisplay.010 endGameDisplay.001 
+endGameDisplay.000 0 0 0 
+endGameDisplay.001 1 0 1 
+endGameDisplay.010 1 1 0 

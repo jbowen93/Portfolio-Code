@@ -1,0 +1,185 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Clock100And1:m1|CM2S'
+Slack : -15.264
+TNS   : -391.585
+
+Type  : Slow 1200mV 85C Model Setup 'Clock100And1:m1|CM3S'
+Slack : -12.740
+TNS   : -145.357
+
+Type  : Slow 1200mV 85C Model Setup 'Clock100And1:m1|TCO1S'
+Slack : -1.570
+TNS   : -17.149
+
+Type  : Slow 1200mV 85C Model Setup 'ClkIn'
+Slack : -0.577
+TNS   : -1.218
+
+Type  : Slow 1200mV 85C Model Setup 'BUT2'
+Slack : 0.080
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clock100And1:m1|CM2S'
+Slack : 0.344
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clock100And1:m1|CM3S'
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ClkIn'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clock100And1:m1|TCO1S'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'BUT2'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'BUT2'
+Slack : -3.000
+TNS   : -14.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ClkIn'
+Slack : -3.000
+TNS   : -9.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock100And1:m1|CM2S'
+Slack : -1.000
+TNS   : -63.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock100And1:m1|CM3S'
+Slack : -1.000
+TNS   : -34.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock100And1:m1|TCO1S'
+Slack : -1.000
+TNS   : -15.000
+
+Type  : Slow 1200mV 0C Model Setup 'Clock100And1:m1|CM2S'
+Slack : -13.616
+TNS   : -347.377
+
+Type  : Slow 1200mV 0C Model Setup 'Clock100And1:m1|CM3S'
+Slack : -11.339
+TNS   : -128.139
+
+Type  : Slow 1200mV 0C Model Setup 'Clock100And1:m1|TCO1S'
+Slack : -1.293
+TNS   : -13.879
+
+Type  : Slow 1200mV 0C Model Setup 'ClkIn'
+Slack : -0.440
+TNS   : -0.845
+
+Type  : Slow 1200mV 0C Model Setup 'BUT2'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clock100And1:m1|CM2S'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clock100And1:m1|CM3S'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clock100And1:m1|TCO1S'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ClkIn'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'BUT2'
+Slack : 0.365
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'BUT2'
+Slack : -3.000
+TNS   : -14.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ClkIn'
+Slack : -3.000
+TNS   : -9.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock100And1:m1|CM2S'
+Slack : -1.000
+TNS   : -63.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock100And1:m1|CM3S'
+Slack : -1.000
+TNS   : -34.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock100And1:m1|TCO1S'
+Slack : -1.000
+TNS   : -15.000
+
+Type  : Fast 1200mV 0C Model Setup 'Clock100And1:m1|CM2S'
+Slack : -8.059
+TNS   : -194.775
+
+Type  : Fast 1200mV 0C Model Setup 'Clock100And1:m1|CM3S'
+Slack : -6.689
+TNS   : -68.383
+
+Type  : Fast 1200mV 0C Model Setup 'Clock100And1:m1|TCO1S'
+Slack : -0.434
+TNS   : -4.160
+
+Type  : Fast 1200mV 0C Model Setup 'ClkIn'
+Slack : 0.106
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'BUT2'
+Slack : 0.494
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clock100And1:m1|CM2S'
+Slack : 0.095
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clock100And1:m1|CM3S'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ClkIn'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clock100And1:m1|TCO1S'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'BUT2'
+Slack : 0.223
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'BUT2'
+Slack : -3.000
+TNS   : -15.320
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ClkIn'
+Slack : -3.000
+TNS   : -9.378
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock100And1:m1|CM2S'
+Slack : -1.000
+TNS   : -63.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock100And1:m1|CM3S'
+Slack : -1.000
+TNS   : -34.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock100And1:m1|TCO1S'
+Slack : -1.000
+TNS   : -15.000
+
+------------------------------------------------------------

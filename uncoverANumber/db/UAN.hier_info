@@ -1,0 +1,1338 @@
+|uncoverANumber
+ClkIn => ClkIn.IN1
+LEDS[0] <= LEDS[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDS[1] <= LEDS[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDS[2] <= LEDS[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDS[3] <= LEDS[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDS[4] <= LEDS[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDS[5] <= LEDS[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDS[6] <= LEDS[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDS[7] <= LEDS[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDS[8] <= LEDS[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDS[9] <= LEDS[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+BUT0 => always0.IN1
+BUT0 => always0.IN1
+BUT1 => always0.IN1
+BUT1 => always0.IN1
+BUT2 => BUT2.IN1
+SevenS0[0] <= SevenS0[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS0[1] <= SevenS0[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS0[2] <= SevenS0[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS0[3] <= SevenS0[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS0[4] <= SevenS0[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS0[5] <= SevenS0[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS0[6] <= SevenS0[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS1[0] <= SevenS1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS1[1] <= SevenS1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS1[2] <= SevenS1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS1[3] <= SevenS1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS1[4] <= SevenS1[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS1[5] <= SevenS1[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS1[6] <= SevenS1[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dec1 <= dec1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS2[0] <= SevenS2[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS2[1] <= SevenS2[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS2[2] <= SevenS2[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS2[3] <= SevenS2[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS2[4] <= SevenS2[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS2[5] <= SevenS2[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS2[6] <= SevenS2[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SevenS3[0] <= <VCC>
+SevenS3[1] <= <VCC>
+SevenS3[2] <= <VCC>
+SevenS3[3] <= <VCC>
+SevenS3[4] <= <VCC>
+SevenS3[5] <= <VCC>
+SevenS3[6] <= <VCC>
+
+
+|uncoverANumber|Clock100And1:m1
+ClkIn => ClkIn.IN1
+En => En.IN2
+En1 => comb.IN0
+Clr_ => Clr_.IN3
+Clk100 <= Clk100.DB_MAX_OUTPUT_PORT_TYPE
+Clk1 <= CM3S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div32
+Clk => Clk.IN5
+En => TT[0].IN1
+Clr_ => Clr_.IN5
+ClrS_ => ClrS_.IN5
+QQ[0] <= TffUnit:unit[0].FF.port5
+QQ[1] <= TffUnit:unit[1].FF.port5
+QQ[2] <= TffUnit:unit[2].FF.port5
+QQ[3] <= TffUnit:unit[3].FF.port5
+QQ[4] <= TffUnit:unit[4].FF.port5
+TCO <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div32|TffUnit:unit[0].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div32|TffUnit:unit[1].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div32|TffUnit:unit[2].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div32|TffUnit:unit[3].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div32|TffUnit:unit[4].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625
+Clk => Clk.IN14
+En => TT[0].IN1
+Clr_ => Clr_.IN14
+ClrS_ => ClrS_.IN14
+QQ[0] <= TffUnit:unit[0].FF.port5
+QQ[1] <= TffUnit:unit[1].FF.port5
+QQ[2] <= TffUnit:unit[2].FF.port5
+QQ[3] <= TffUnit:unit[3].FF.port5
+QQ[4] <= TffUnit:unit[4].FF.port5
+QQ[5] <= TffUnit:unit[5].FF.port5
+QQ[6] <= TffUnit:unit[6].FF.port5
+QQ[7] <= TffUnit:unit[7].FF.port5
+QQ[8] <= TffUnit:unit[8].FF.port5
+QQ[9] <= TffUnit:unit[9].FF.port5
+QQ[10] <= TffUnit:unit[10].FF.port5
+QQ[11] <= TffUnit:unit[11].FF.port5
+QQ[12] <= TffUnit:unit[12].FF.port5
+QQ[13] <= TffUnit:unit[13].FF.port5
+TCO <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[0].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[1].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[2].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[3].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[4].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[5].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[6].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[7].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[8].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[9].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[10].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[11].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[12].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div15625|TffUnit:unit[13].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div100
+Clk => Clk.IN7
+En => TT[0].IN1
+Clr_ => Clr_.IN7
+ClrS_ => ClrS_.IN7
+QQ[0] <= TffUnit:unit[0].FF.port5
+QQ[1] <= TffUnit:unit[1].FF.port5
+QQ[2] <= TffUnit:unit[2].FF.port5
+QQ[3] <= TffUnit:unit[3].FF.port5
+QQ[4] <= TffUnit:unit[4].FF.port5
+QQ[5] <= TffUnit:unit[5].FF.port5
+QQ[6] <= TffUnit:unit[6].FF.port5
+TCO <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div100|TffUnit:unit[0].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div100|TffUnit:unit[1].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div100|TffUnit:unit[2].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div100|TffUnit:unit[3].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div100|TffUnit:unit[4].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div100|TffUnit:unit[5].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|Clock100And1:m1|TffCounter:div100|TffUnit:unit[6].FF
+Clk => Q~reg0.CLK
+T => Q.IN1
+T => Tout.IN1
+T => Q.IN1
+Clr_ => Q~reg0.ACLR
+ClrS_ => Q.OUTPUTSELECT
+Tout <= Tout.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|LFSR2:rand
+Clk => D.CLK
+Clk => QQ[1]~reg0.CLK
+Clk => QQ[2]~reg0.CLK
+Clk => QQ[3]~reg0.CLK
+Clk => QQ[4]~reg0.CLK
+Clk => QQ[5]~reg0.CLK
+Clk => QQ[6]~reg0.CLK
+Clk => QQ[7]~reg0.CLK
+Clk => QQ[8]~reg0.CLK
+Clk => QQ[9]~reg0.CLK
+Clk => QQ[10]~reg0.CLK
+k[0] => Mux0.IN9
+k[1] => Mux0.IN8
+k[2] => Mux0.IN7
+k[3] => Mux0.IN6
+k[4] => ~NO_FANOUT~
+k[5] => ~NO_FANOUT~
+k[6] => ~NO_FANOUT~
+k[7] => ~NO_FANOUT~
+k[8] => ~NO_FANOUT~
+k[9] => ~NO_FANOUT~
+QQ[1] <= QQ[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QQ[2] <= QQ[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QQ[3] <= QQ[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QQ[4] <= QQ[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QQ[5] <= QQ[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QQ[6] <= QQ[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QQ[7] <= QQ[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QQ[8] <= QQ[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QQ[9] <= QQ[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QQ[10] <= QQ[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Set_ => ~NO_FANOUT~
+SS[0] => ~NO_FANOUT~
+SS[1] => ~NO_FANOUT~
+SS[2] => ~NO_FANOUT~
+SS[3] => ~NO_FANOUT~
+SS[4] => ~NO_FANOUT~
+SS[5] => ~NO_FANOUT~
+SS[6] => ~NO_FANOUT~
+SS[7] => ~NO_FANOUT~
+SS[8] => ~NO_FANOUT~
+SS[9] => ~NO_FANOUT~
+
+
+|uncoverANumber|binary_to_BCD:converter
+A[0] => ONES[0].DATAIN
+A[1] => d5[0].IN1
+A[2] => d4[0].IN1
+A[3] => d3[0].IN1
+A[4] => d2[0].IN1
+A[5] => d1[0].IN1
+A[6] => d1[1].IN1
+A[7] => d1[2].IN1
+A[8] => ~NO_FANOUT~
+A[9] => ~NO_FANOUT~
+ONES[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+ONES[1] <= add3:m5.port1
+ONES[2] <= add3:m5.port1
+ONES[3] <= add3:m5.port1
+TENS[0] <= add3:m5.port1
+TENS[1] <= add3:m7.port1
+TENS[2] <= add3:m7.port1
+TENS[3] <= add3:m7.port1
+HUNDREDS[0] <= add3:m7.port1
+HUNDREDS[1] <= add3:m6.port1
+
+
+|uncoverANumber|binary_to_BCD:converter|add3:m1
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|binary_to_BCD:converter|add3:m2
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|binary_to_BCD:converter|add3:m3
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|binary_to_BCD:converter|add3:m4
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|binary_to_BCD:converter|add3:m5
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|binary_to_BCD:converter|add3:m6
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|binary_to_BCD:converter|add3:m7
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uncoverANumber|hex2seven:ones
+SevenS[0] <= SevenS[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[1] <= SevenS[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[2] <= SevenS[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[3] <= SevenS[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[4] <= SevenS[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[5] <= SevenS[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[6] <= SevenS[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x[0] => Equal0.IN3
+x[0] => Equal1.IN0
+x[0] => Equal2.IN3
+x[0] => Equal3.IN1
+x[0] => Equal4.IN3
+x[0] => Equal5.IN1
+x[0] => Equal6.IN3
+x[0] => Equal7.IN2
+x[0] => Equal8.IN3
+x[0] => Equal9.IN1
+x[0] => Equal10.IN3
+x[0] => Equal11.IN2
+x[0] => Equal12.IN3
+x[0] => Equal13.IN2
+x[0] => Equal14.IN3
+x[0] => Equal15.IN3
+x[1] => Equal0.IN2
+x[1] => Equal1.IN3
+x[1] => Equal2.IN0
+x[1] => Equal3.IN0
+x[1] => Equal4.IN2
+x[1] => Equal5.IN3
+x[1] => Equal6.IN1
+x[1] => Equal7.IN1
+x[1] => Equal8.IN2
+x[1] => Equal9.IN3
+x[1] => Equal10.IN1
+x[1] => Equal11.IN1
+x[1] => Equal12.IN2
+x[1] => Equal13.IN3
+x[1] => Equal14.IN2
+x[1] => Equal15.IN2
+x[2] => Equal0.IN1
+x[2] => Equal1.IN2
+x[2] => Equal2.IN2
+x[2] => Equal3.IN3
+x[2] => Equal4.IN0
+x[2] => Equal5.IN0
+x[2] => Equal6.IN0
+x[2] => Equal7.IN0
+x[2] => Equal8.IN1
+x[2] => Equal9.IN2
+x[2] => Equal10.IN2
+x[2] => Equal11.IN3
+x[2] => Equal12.IN1
+x[2] => Equal13.IN1
+x[2] => Equal14.IN1
+x[2] => Equal15.IN1
+x[3] => Equal0.IN0
+x[3] => Equal1.IN1
+x[3] => Equal2.IN1
+x[3] => Equal3.IN2
+x[3] => Equal4.IN1
+x[3] => Equal5.IN2
+x[3] => Equal6.IN2
+x[3] => Equal7.IN3
+x[3] => Equal8.IN0
+x[3] => Equal9.IN0
+x[3] => Equal10.IN0
+x[3] => Equal11.IN0
+x[3] => Equal12.IN0
+x[3] => Equal13.IN0
+x[3] => Equal14.IN0
+x[3] => Equal15.IN0
+BI_ => SevenS[6].IN1
+BI_ => SevenS[6].OUTPUTSELECT
+BI_ => SevenS[5].DATAA
+BI_ => SevenS[2].DATAA
+LT_ => SevenS[6].DATAA
+LT_ => SevenS[6].IN1
+
+
+|uncoverANumber|hex2seven:tens
+SevenS[0] <= SevenS[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[1] <= SevenS[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[2] <= SevenS[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[3] <= SevenS[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[4] <= SevenS[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[5] <= SevenS[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[6] <= SevenS[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x[0] => Equal0.IN3
+x[0] => Equal1.IN0
+x[0] => Equal2.IN3
+x[0] => Equal3.IN1
+x[0] => Equal4.IN3
+x[0] => Equal5.IN1
+x[0] => Equal6.IN3
+x[0] => Equal7.IN2
+x[0] => Equal8.IN3
+x[0] => Equal9.IN1
+x[0] => Equal10.IN3
+x[0] => Equal11.IN2
+x[0] => Equal12.IN3
+x[0] => Equal13.IN2
+x[0] => Equal14.IN3
+x[0] => Equal15.IN3
+x[1] => Equal0.IN2
+x[1] => Equal1.IN3
+x[1] => Equal2.IN0
+x[1] => Equal3.IN0
+x[1] => Equal4.IN2
+x[1] => Equal5.IN3
+x[1] => Equal6.IN1
+x[1] => Equal7.IN1
+x[1] => Equal8.IN2
+x[1] => Equal9.IN3
+x[1] => Equal10.IN1
+x[1] => Equal11.IN1
+x[1] => Equal12.IN2
+x[1] => Equal13.IN3
+x[1] => Equal14.IN2
+x[1] => Equal15.IN2
+x[2] => Equal0.IN1
+x[2] => Equal1.IN2
+x[2] => Equal2.IN2
+x[2] => Equal3.IN3
+x[2] => Equal4.IN0
+x[2] => Equal5.IN0
+x[2] => Equal6.IN0
+x[2] => Equal7.IN0
+x[2] => Equal8.IN1
+x[2] => Equal9.IN2
+x[2] => Equal10.IN2
+x[2] => Equal11.IN3
+x[2] => Equal12.IN1
+x[2] => Equal13.IN1
+x[2] => Equal14.IN1
+x[2] => Equal15.IN1
+x[3] => Equal0.IN0
+x[3] => Equal1.IN1
+x[3] => Equal2.IN1
+x[3] => Equal3.IN2
+x[3] => Equal4.IN1
+x[3] => Equal5.IN2
+x[3] => Equal6.IN2
+x[3] => Equal7.IN3
+x[3] => Equal8.IN0
+x[3] => Equal9.IN0
+x[3] => Equal10.IN0
+x[3] => Equal11.IN0
+x[3] => Equal12.IN0
+x[3] => Equal13.IN0
+x[3] => Equal14.IN0
+x[3] => Equal15.IN0
+BI_ => SevenS[6].IN1
+BI_ => SevenS[6].OUTPUTSELECT
+BI_ => SevenS[5].DATAA
+BI_ => SevenS[2].DATAA
+LT_ => SevenS[6].DATAA
+LT_ => SevenS[6].IN1
+
+
+|uncoverANumber|hex2seven:hundreds
+SevenS[0] <= SevenS[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[1] <= SevenS[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[2] <= SevenS[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[3] <= SevenS[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[4] <= SevenS[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[5] <= SevenS[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[6] <= SevenS[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x[0] => Equal0.IN3
+x[0] => Equal1.IN0
+x[0] => Equal2.IN3
+x[0] => Equal3.IN1
+x[0] => Equal4.IN3
+x[0] => Equal5.IN1
+x[0] => Equal6.IN3
+x[0] => Equal7.IN2
+x[0] => Equal8.IN3
+x[0] => Equal9.IN1
+x[0] => Equal10.IN3
+x[0] => Equal11.IN2
+x[0] => Equal12.IN3
+x[0] => Equal13.IN2
+x[0] => Equal14.IN3
+x[0] => Equal15.IN3
+x[1] => Equal0.IN2
+x[1] => Equal1.IN3
+x[1] => Equal2.IN0
+x[1] => Equal3.IN0
+x[1] => Equal4.IN2
+x[1] => Equal5.IN3
+x[1] => Equal6.IN1
+x[1] => Equal7.IN1
+x[1] => Equal8.IN2
+x[1] => Equal9.IN3
+x[1] => Equal10.IN1
+x[1] => Equal11.IN1
+x[1] => Equal12.IN2
+x[1] => Equal13.IN3
+x[1] => Equal14.IN2
+x[1] => Equal15.IN2
+x[2] => Equal0.IN1
+x[2] => Equal1.IN2
+x[2] => Equal2.IN2
+x[2] => Equal3.IN3
+x[2] => Equal4.IN0
+x[2] => Equal5.IN0
+x[2] => Equal6.IN0
+x[2] => Equal7.IN0
+x[2] => Equal8.IN1
+x[2] => Equal9.IN2
+x[2] => Equal10.IN2
+x[2] => Equal11.IN3
+x[2] => Equal12.IN1
+x[2] => Equal13.IN1
+x[2] => Equal14.IN1
+x[2] => Equal15.IN1
+x[3] => Equal0.IN0
+x[3] => Equal1.IN1
+x[3] => Equal2.IN1
+x[3] => Equal3.IN2
+x[3] => Equal4.IN1
+x[3] => Equal5.IN2
+x[3] => Equal6.IN2
+x[3] => Equal7.IN3
+x[3] => Equal8.IN0
+x[3] => Equal9.IN0
+x[3] => Equal10.IN0
+x[3] => Equal11.IN0
+x[3] => Equal12.IN0
+x[3] => Equal13.IN0
+x[3] => Equal14.IN0
+x[3] => Equal15.IN0
+BI_ => SevenS[6].IN1
+BI_ => SevenS[6].OUTPUTSELECT
+BI_ => SevenS[5].DATAA
+BI_ => SevenS[2].DATAA
+LT_ => SevenS[6].DATAA
+LT_ => SevenS[6].IN1
+
+
+|uncoverANumber|hex2seven:error1s
+SevenS[0] <= SevenS[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[1] <= SevenS[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[2] <= SevenS[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[3] <= SevenS[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[4] <= SevenS[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[5] <= SevenS[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[6] <= SevenS[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x[0] => Equal0.IN3
+x[0] => Equal1.IN0
+x[0] => Equal2.IN3
+x[0] => Equal3.IN1
+x[0] => Equal4.IN3
+x[0] => Equal5.IN1
+x[0] => Equal6.IN3
+x[0] => Equal7.IN2
+x[0] => Equal8.IN3
+x[0] => Equal9.IN1
+x[0] => Equal10.IN3
+x[0] => Equal11.IN2
+x[0] => Equal12.IN3
+x[0] => Equal13.IN2
+x[0] => Equal14.IN3
+x[0] => Equal15.IN3
+x[1] => Equal0.IN2
+x[1] => Equal1.IN3
+x[1] => Equal2.IN0
+x[1] => Equal3.IN0
+x[1] => Equal4.IN2
+x[1] => Equal5.IN3
+x[1] => Equal6.IN1
+x[1] => Equal7.IN1
+x[1] => Equal8.IN2
+x[1] => Equal9.IN3
+x[1] => Equal10.IN1
+x[1] => Equal11.IN1
+x[1] => Equal12.IN2
+x[1] => Equal13.IN3
+x[1] => Equal14.IN2
+x[1] => Equal15.IN2
+x[2] => Equal0.IN1
+x[2] => Equal1.IN2
+x[2] => Equal2.IN2
+x[2] => Equal3.IN3
+x[2] => Equal4.IN0
+x[2] => Equal5.IN0
+x[2] => Equal6.IN0
+x[2] => Equal7.IN0
+x[2] => Equal8.IN1
+x[2] => Equal9.IN2
+x[2] => Equal10.IN2
+x[2] => Equal11.IN3
+x[2] => Equal12.IN1
+x[2] => Equal13.IN1
+x[2] => Equal14.IN1
+x[2] => Equal15.IN1
+x[3] => Equal0.IN0
+x[3] => Equal1.IN1
+x[3] => Equal2.IN1
+x[3] => Equal3.IN2
+x[3] => Equal4.IN1
+x[3] => Equal5.IN2
+x[3] => Equal6.IN2
+x[3] => Equal7.IN3
+x[3] => Equal8.IN0
+x[3] => Equal9.IN0
+x[3] => Equal10.IN0
+x[3] => Equal11.IN0
+x[3] => Equal12.IN0
+x[3] => Equal13.IN0
+x[3] => Equal14.IN0
+x[3] => Equal15.IN0
+BI_ => SevenS[6].IN1
+BI_ => SevenS[6].OUTPUTSELECT
+BI_ => SevenS[5].DATAA
+BI_ => SevenS[2].DATAA
+LT_ => SevenS[6].DATAA
+LT_ => SevenS[6].IN1
+
+
+|uncoverANumber|hex2seven:error10s
+SevenS[0] <= SevenS[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[1] <= SevenS[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[2] <= SevenS[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[3] <= SevenS[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[4] <= SevenS[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[5] <= SevenS[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[6] <= SevenS[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x[0] => Equal0.IN3
+x[0] => Equal1.IN0
+x[0] => Equal2.IN3
+x[0] => Equal3.IN1
+x[0] => Equal4.IN3
+x[0] => Equal5.IN1
+x[0] => Equal6.IN3
+x[0] => Equal7.IN2
+x[0] => Equal8.IN3
+x[0] => Equal9.IN1
+x[0] => Equal10.IN3
+x[0] => Equal11.IN2
+x[0] => Equal12.IN3
+x[0] => Equal13.IN2
+x[0] => Equal14.IN3
+x[0] => Equal15.IN3
+x[1] => Equal0.IN2
+x[1] => Equal1.IN3
+x[1] => Equal2.IN0
+x[1] => Equal3.IN0
+x[1] => Equal4.IN2
+x[1] => Equal5.IN3
+x[1] => Equal6.IN1
+x[1] => Equal7.IN1
+x[1] => Equal8.IN2
+x[1] => Equal9.IN3
+x[1] => Equal10.IN1
+x[1] => Equal11.IN1
+x[1] => Equal12.IN2
+x[1] => Equal13.IN3
+x[1] => Equal14.IN2
+x[1] => Equal15.IN2
+x[2] => Equal0.IN1
+x[2] => Equal1.IN2
+x[2] => Equal2.IN2
+x[2] => Equal3.IN3
+x[2] => Equal4.IN0
+x[2] => Equal5.IN0
+x[2] => Equal6.IN0
+x[2] => Equal7.IN0
+x[2] => Equal8.IN1
+x[2] => Equal9.IN2
+x[2] => Equal10.IN2
+x[2] => Equal11.IN3
+x[2] => Equal12.IN1
+x[2] => Equal13.IN1
+x[2] => Equal14.IN1
+x[2] => Equal15.IN1
+x[3] => Equal0.IN0
+x[3] => Equal1.IN1
+x[3] => Equal2.IN1
+x[3] => Equal3.IN2
+x[3] => Equal4.IN1
+x[3] => Equal5.IN2
+x[3] => Equal6.IN2
+x[3] => Equal7.IN3
+x[3] => Equal8.IN0
+x[3] => Equal9.IN0
+x[3] => Equal10.IN0
+x[3] => Equal11.IN0
+x[3] => Equal12.IN0
+x[3] => Equal13.IN0
+x[3] => Equal14.IN0
+x[3] => Equal15.IN0
+BI_ => SevenS[6].IN1
+BI_ => SevenS[6].OUTPUTSELECT
+BI_ => SevenS[5].DATAA
+BI_ => SevenS[2].DATAA
+LT_ => SevenS[6].DATAA
+LT_ => SevenS[6].IN1
+
+
+|uncoverANumber|hex2seven:error100s
+SevenS[0] <= SevenS[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[1] <= SevenS[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[2] <= SevenS[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[3] <= SevenS[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[4] <= SevenS[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[5] <= SevenS[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[6] <= SevenS[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x[0] => Equal0.IN3
+x[0] => Equal1.IN0
+x[0] => Equal2.IN3
+x[0] => Equal3.IN1
+x[0] => Equal4.IN3
+x[0] => Equal5.IN1
+x[0] => Equal6.IN3
+x[0] => Equal7.IN2
+x[0] => Equal8.IN3
+x[0] => Equal9.IN1
+x[0] => Equal10.IN3
+x[0] => Equal11.IN2
+x[0] => Equal12.IN3
+x[0] => Equal13.IN2
+x[0] => Equal14.IN3
+x[0] => Equal15.IN3
+x[1] => Equal0.IN2
+x[1] => Equal1.IN3
+x[1] => Equal2.IN0
+x[1] => Equal3.IN0
+x[1] => Equal4.IN2
+x[1] => Equal5.IN3
+x[1] => Equal6.IN1
+x[1] => Equal7.IN1
+x[1] => Equal8.IN2
+x[1] => Equal9.IN3
+x[1] => Equal10.IN1
+x[1] => Equal11.IN1
+x[1] => Equal12.IN2
+x[1] => Equal13.IN3
+x[1] => Equal14.IN2
+x[1] => Equal15.IN2
+x[2] => Equal0.IN1
+x[2] => Equal1.IN2
+x[2] => Equal2.IN2
+x[2] => Equal3.IN3
+x[2] => Equal4.IN0
+x[2] => Equal5.IN0
+x[2] => Equal6.IN0
+x[2] => Equal7.IN0
+x[2] => Equal8.IN1
+x[2] => Equal9.IN2
+x[2] => Equal10.IN2
+x[2] => Equal11.IN3
+x[2] => Equal12.IN1
+x[2] => Equal13.IN1
+x[2] => Equal14.IN1
+x[2] => Equal15.IN1
+x[3] => Equal0.IN0
+x[3] => Equal1.IN1
+x[3] => Equal2.IN1
+x[3] => Equal3.IN2
+x[3] => Equal4.IN1
+x[3] => Equal5.IN2
+x[3] => Equal6.IN2
+x[3] => Equal7.IN3
+x[3] => Equal8.IN0
+x[3] => Equal9.IN0
+x[3] => Equal10.IN0
+x[3] => Equal11.IN0
+x[3] => Equal12.IN0
+x[3] => Equal13.IN0
+x[3] => Equal14.IN0
+x[3] => Equal15.IN0
+BI_ => SevenS[6].IN1
+BI_ => SevenS[6].OUTPUTSELECT
+BI_ => SevenS[5].DATAA
+BI_ => SevenS[2].DATAA
+LT_ => SevenS[6].DATAA
+LT_ => SevenS[6].IN1
+
+
+|uncoverANumber|hex2seven:time10thss
+SevenS[0] <= SevenS[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[1] <= SevenS[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[2] <= SevenS[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[3] <= SevenS[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[4] <= SevenS[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[5] <= SevenS[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[6] <= SevenS[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x[0] => Equal0.IN3
+x[0] => Equal1.IN0
+x[0] => Equal2.IN3
+x[0] => Equal3.IN1
+x[0] => Equal4.IN3
+x[0] => Equal5.IN1
+x[0] => Equal6.IN3
+x[0] => Equal7.IN2
+x[0] => Equal8.IN3
+x[0] => Equal9.IN1
+x[0] => Equal10.IN3
+x[0] => Equal11.IN2
+x[0] => Equal12.IN3
+x[0] => Equal13.IN2
+x[0] => Equal14.IN3
+x[0] => Equal15.IN3
+x[1] => Equal0.IN2
+x[1] => Equal1.IN3
+x[1] => Equal2.IN0
+x[1] => Equal3.IN0
+x[1] => Equal4.IN2
+x[1] => Equal5.IN3
+x[1] => Equal6.IN1
+x[1] => Equal7.IN1
+x[1] => Equal8.IN2
+x[1] => Equal9.IN3
+x[1] => Equal10.IN1
+x[1] => Equal11.IN1
+x[1] => Equal12.IN2
+x[1] => Equal13.IN3
+x[1] => Equal14.IN2
+x[1] => Equal15.IN2
+x[2] => Equal0.IN1
+x[2] => Equal1.IN2
+x[2] => Equal2.IN2
+x[2] => Equal3.IN3
+x[2] => Equal4.IN0
+x[2] => Equal5.IN0
+x[2] => Equal6.IN0
+x[2] => Equal7.IN0
+x[2] => Equal8.IN1
+x[2] => Equal9.IN2
+x[2] => Equal10.IN2
+x[2] => Equal11.IN3
+x[2] => Equal12.IN1
+x[2] => Equal13.IN1
+x[2] => Equal14.IN1
+x[2] => Equal15.IN1
+x[3] => Equal0.IN0
+x[3] => Equal1.IN1
+x[3] => Equal2.IN1
+x[3] => Equal3.IN2
+x[3] => Equal4.IN1
+x[3] => Equal5.IN2
+x[3] => Equal6.IN2
+x[3] => Equal7.IN3
+x[3] => Equal8.IN0
+x[3] => Equal9.IN0
+x[3] => Equal10.IN0
+x[3] => Equal11.IN0
+x[3] => Equal12.IN0
+x[3] => Equal13.IN0
+x[3] => Equal14.IN0
+x[3] => Equal15.IN0
+BI_ => SevenS[6].IN1
+BI_ => SevenS[6].OUTPUTSELECT
+BI_ => SevenS[5].DATAA
+BI_ => SevenS[2].DATAA
+LT_ => SevenS[6].DATAA
+LT_ => SevenS[6].IN1
+
+
+|uncoverANumber|hex2seven:time1ss
+SevenS[0] <= SevenS[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[1] <= SevenS[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[2] <= SevenS[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[3] <= SevenS[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[4] <= SevenS[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[5] <= SevenS[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[6] <= SevenS[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x[0] => Equal0.IN3
+x[0] => Equal1.IN0
+x[0] => Equal2.IN3
+x[0] => Equal3.IN1
+x[0] => Equal4.IN3
+x[0] => Equal5.IN1
+x[0] => Equal6.IN3
+x[0] => Equal7.IN2
+x[0] => Equal8.IN3
+x[0] => Equal9.IN1
+x[0] => Equal10.IN3
+x[0] => Equal11.IN2
+x[0] => Equal12.IN3
+x[0] => Equal13.IN2
+x[0] => Equal14.IN3
+x[0] => Equal15.IN3
+x[1] => Equal0.IN2
+x[1] => Equal1.IN3
+x[1] => Equal2.IN0
+x[1] => Equal3.IN0
+x[1] => Equal4.IN2
+x[1] => Equal5.IN3
+x[1] => Equal6.IN1
+x[1] => Equal7.IN1
+x[1] => Equal8.IN2
+x[1] => Equal9.IN3
+x[1] => Equal10.IN1
+x[1] => Equal11.IN1
+x[1] => Equal12.IN2
+x[1] => Equal13.IN3
+x[1] => Equal14.IN2
+x[1] => Equal15.IN2
+x[2] => Equal0.IN1
+x[2] => Equal1.IN2
+x[2] => Equal2.IN2
+x[2] => Equal3.IN3
+x[2] => Equal4.IN0
+x[2] => Equal5.IN0
+x[2] => Equal6.IN0
+x[2] => Equal7.IN0
+x[2] => Equal8.IN1
+x[2] => Equal9.IN2
+x[2] => Equal10.IN2
+x[2] => Equal11.IN3
+x[2] => Equal12.IN1
+x[2] => Equal13.IN1
+x[2] => Equal14.IN1
+x[2] => Equal15.IN1
+x[3] => Equal0.IN0
+x[3] => Equal1.IN1
+x[3] => Equal2.IN1
+x[3] => Equal3.IN2
+x[3] => Equal4.IN1
+x[3] => Equal5.IN2
+x[3] => Equal6.IN2
+x[3] => Equal7.IN3
+x[3] => Equal8.IN0
+x[3] => Equal9.IN0
+x[3] => Equal10.IN0
+x[3] => Equal11.IN0
+x[3] => Equal12.IN0
+x[3] => Equal13.IN0
+x[3] => Equal14.IN0
+x[3] => Equal15.IN0
+BI_ => SevenS[6].IN1
+BI_ => SevenS[6].OUTPUTSELECT
+BI_ => SevenS[5].DATAA
+BI_ => SevenS[2].DATAA
+LT_ => SevenS[6].DATAA
+LT_ => SevenS[6].IN1
+
+
+|uncoverANumber|hex2seven:time10ss
+SevenS[0] <= SevenS[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[1] <= SevenS[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[2] <= SevenS[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[3] <= SevenS[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[4] <= SevenS[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[5] <= SevenS[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[6] <= SevenS[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x[0] => Equal0.IN3
+x[0] => Equal1.IN0
+x[0] => Equal2.IN3
+x[0] => Equal3.IN1
+x[0] => Equal4.IN3
+x[0] => Equal5.IN1
+x[0] => Equal6.IN3
+x[0] => Equal7.IN2
+x[0] => Equal8.IN3
+x[0] => Equal9.IN1
+x[0] => Equal10.IN3
+x[0] => Equal11.IN2
+x[0] => Equal12.IN3
+x[0] => Equal13.IN2
+x[0] => Equal14.IN3
+x[0] => Equal15.IN3
+x[1] => Equal0.IN2
+x[1] => Equal1.IN3
+x[1] => Equal2.IN0
+x[1] => Equal3.IN0
+x[1] => Equal4.IN2
+x[1] => Equal5.IN3
+x[1] => Equal6.IN1
+x[1] => Equal7.IN1
+x[1] => Equal8.IN2
+x[1] => Equal9.IN3
+x[1] => Equal10.IN1
+x[1] => Equal11.IN1
+x[1] => Equal12.IN2
+x[1] => Equal13.IN3
+x[1] => Equal14.IN2
+x[1] => Equal15.IN2
+x[2] => Equal0.IN1
+x[2] => Equal1.IN2
+x[2] => Equal2.IN2
+x[2] => Equal3.IN3
+x[2] => Equal4.IN0
+x[2] => Equal5.IN0
+x[2] => Equal6.IN0
+x[2] => Equal7.IN0
+x[2] => Equal8.IN1
+x[2] => Equal9.IN2
+x[2] => Equal10.IN2
+x[2] => Equal11.IN3
+x[2] => Equal12.IN1
+x[2] => Equal13.IN1
+x[2] => Equal14.IN1
+x[2] => Equal15.IN1
+x[3] => Equal0.IN0
+x[3] => Equal1.IN1
+x[3] => Equal2.IN1
+x[3] => Equal3.IN2
+x[3] => Equal4.IN1
+x[3] => Equal5.IN2
+x[3] => Equal6.IN2
+x[3] => Equal7.IN3
+x[3] => Equal8.IN0
+x[3] => Equal9.IN0
+x[3] => Equal10.IN0
+x[3] => Equal11.IN0
+x[3] => Equal12.IN0
+x[3] => Equal13.IN0
+x[3] => Equal14.IN0
+x[3] => Equal15.IN0
+BI_ => SevenS[6].IN1
+BI_ => SevenS[6].OUTPUTSELECT
+BI_ => SevenS[5].DATAA
+BI_ => SevenS[2].DATAA
+LT_ => SevenS[6].DATAA
+LT_ => SevenS[6].IN1
+
+
+|uncoverANumber|hex2seven:time100ss
+SevenS[0] <= SevenS[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[1] <= SevenS[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[2] <= SevenS[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[3] <= SevenS[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[4] <= SevenS[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[5] <= SevenS[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SevenS[6] <= SevenS[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x[0] => Equal0.IN3
+x[0] => Equal1.IN0
+x[0] => Equal2.IN3
+x[0] => Equal3.IN1
+x[0] => Equal4.IN3
+x[0] => Equal5.IN1
+x[0] => Equal6.IN3
+x[0] => Equal7.IN2
+x[0] => Equal8.IN3
+x[0] => Equal9.IN1
+x[0] => Equal10.IN3
+x[0] => Equal11.IN2
+x[0] => Equal12.IN3
+x[0] => Equal13.IN2
+x[0] => Equal14.IN3
+x[0] => Equal15.IN3
+x[1] => Equal0.IN2
+x[1] => Equal1.IN3
+x[1] => Equal2.IN0
+x[1] => Equal3.IN0
+x[1] => Equal4.IN2
+x[1] => Equal5.IN3
+x[1] => Equal6.IN1
+x[1] => Equal7.IN1
+x[1] => Equal8.IN2
+x[1] => Equal9.IN3
+x[1] => Equal10.IN1
+x[1] => Equal11.IN1
+x[1] => Equal12.IN2
+x[1] => Equal13.IN3
+x[1] => Equal14.IN2
+x[1] => Equal15.IN2
+x[2] => Equal0.IN1
+x[2] => Equal1.IN2
+x[2] => Equal2.IN2
+x[2] => Equal3.IN3
+x[2] => Equal4.IN0
+x[2] => Equal5.IN0
+x[2] => Equal6.IN0
+x[2] => Equal7.IN0
+x[2] => Equal8.IN1
+x[2] => Equal9.IN2
+x[2] => Equal10.IN2
+x[2] => Equal11.IN3
+x[2] => Equal12.IN1
+x[2] => Equal13.IN1
+x[2] => Equal14.IN1
+x[2] => Equal15.IN1
+x[3] => Equal0.IN0
+x[3] => Equal1.IN1
+x[3] => Equal2.IN1
+x[3] => Equal3.IN2
+x[3] => Equal4.IN1
+x[3] => Equal5.IN2
+x[3] => Equal6.IN2
+x[3] => Equal7.IN3
+x[3] => Equal8.IN0
+x[3] => Equal9.IN0
+x[3] => Equal10.IN0
+x[3] => Equal11.IN0
+x[3] => Equal12.IN0
+x[3] => Equal13.IN0
+x[3] => Equal14.IN0
+x[3] => Equal15.IN0
+BI_ => SevenS[6].IN1
+BI_ => SevenS[6].OUTPUTSELECT
+BI_ => SevenS[5].DATAA
+BI_ => SevenS[2].DATAA
+LT_ => SevenS[6].DATAA
+LT_ => SevenS[6].IN1
+
+
